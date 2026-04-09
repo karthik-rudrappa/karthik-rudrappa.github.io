@@ -9,9 +9,21 @@ function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="flex w-full shrink-0 flex-col items-center gap-2 border-t border-border px-4 py-6 sm:flex-row md:px-6 sm:justify-between">
-      <p className="text-xs text-gray-500 dark:text-gray-400">
-        © {year} {config.author}. All rights reserved.
-      </p>
+      <div className="flex flex-col gap-1">
+        <p className="text-xs text-gray-500 dark:text-gray-400">
+          © {year} {config.author}. All rights reserved.
+        </p>
+        <p className="text-xs text-gray-500 dark:text-gray-500">
+          Design inspired by{" "}
+          <Link
+            href="https://github.com/Naresh-Khatri/3d-portfolio"
+            target="_blank"
+            className="underline hover:text-gray-300 transition-colors"
+          >
+            Naresh Khatri
+          </Link>
+        </p>
+      </div>
       <SocialMediaButtons />
       <nav className="flex gap-4 sm:gap-6 z-10">
         {footer.map((link, index) => {
@@ -22,6 +34,7 @@ function Footer() {
               className="text-xs underline-offset-4 hover:underline"
               href={href}
               key={`l_${index}`}
+              target="_blank"
             >
               <Button variant={"link"}>{title}</Button>
             </Link>

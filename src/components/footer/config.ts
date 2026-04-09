@@ -1,11 +1,11 @@
 const footer: { title: string; href: string }[] = [
   {
-    title: "Blog",
-    href: "/blogs",
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/karthik-n-rudrappa/",
   },
   {
-    title: "Newsletter",
-    href: "/news",
+    title: "GitHub",
+    href: "https://github.com/karthik-rudrappa",
   },
 ];
 
